@@ -23,7 +23,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $messages = \App\Message::all();
-        return view('home', compact('messages'));
+
+        $personal_messages = \App\Message::where('recipient_id', '=', \Auth::user()->id)->get();
+        return view('/home', compact('personal_messages'));
     }
+
+    public function read($id) {
+        $game = \App\Message::find($id);
+        $message_id = $id;
+        return view('message', compact('message_id'));
+  }
 }

@@ -27,8 +27,8 @@ class MessagesTableSeeder extends Seeder
         'body' => 'Please take out the recycling and wash the Grumobile. Thanks!',
         'is_read' => false,
         'is_starred' =>false,
-        'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-        'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        'created_at' => Carbon::now()->format('Y-m-d'),
+        'updated_at' => Carbon::now()->format('Y-m-d')
       ]);
 
       DB::table('messages')->insert([
