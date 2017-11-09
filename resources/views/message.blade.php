@@ -6,7 +6,7 @@
        <div class="col-md-8 col-md-offset-2">
         <div class="panel panel-default">
          <div class="panel-heading">
-           	{{ \Auth::user()->name }}'s Message From {{ $message->sender->name}}
+           	<h2>{{ \Auth::user()->name }}'s Message From {{ $message->sender->name}}</h2>
         </div>
 
         <div class="panel-body">
@@ -18,14 +18,18 @@
 
         <table class="table">
         <tr>
-       	{{ $message->body }}
+       	<h4>{{ $message->body }}</h4>
        	</tr>
     	<br>
     	<br>
-    	<a href="/create">Compose New Evil Message</a>
+    	<a href="/create">
+			<button class="btn btn-primary">CREATE NEW EVIL MESSAGE!!!</button>
+		</a>
     	<br>
     	<br>
-    	<a href="/home">Back to {{ \Auth::user()->name }}'s Messages</a>
+    	<a href="/home">
+			<button class="btn btn-primary">BACK TO EVIL INBOX!!!</button>
+		</a>
     	<br>
     	
 

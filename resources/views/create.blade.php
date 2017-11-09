@@ -3,14 +3,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>write message</title>
+	<title>Evil Messages!</title>
 </head>
 <body>
 
-	<h1>Write new message</h1>
+	<h1>Compose a new EVIL MESSAGE!!!</h1>
+
+	<a href="/home">
+		<button class="btn btn-info">BACK TO EVIL MESSAGES!!!</button>
+	</a>
+	<br>
+	<br>
 
 	<form action="/message" method="post">
-		<label for="recipient">recipient</label>
+		<label for="recipient">EVIL RECIPIENT!</label>
 		  <select name="recipient_id">
 		    <option value="1">gru</option>
 		    <option value="2">stuart</option>
@@ -21,18 +27,18 @@
 		  <br><br>
 
 
-		<label for="subject">subject</label>
+		<label for="subject">EVIL SUBJECT!</label>
 		<input type="text" name="subject" value=""><br><br>
 
 
-		<label for="message">message</label>
+		<label for="message">EVIL MESSAGE!</label>
 		<input type="text" name="message" value=""><br><br>
 
 		{{ method_field('POST') }}
   		{{ csrf_field() }}
 
-		<label for="submit">send message</label>
-		<button type="submit" name="submit" value="submit">hey im a button</button><br>
+		<label for="submit">WORLD DOMINATION!  </label>
+		<button type="submit" name="submit" value="submit">(send your message)</button><br>
 
 	</form>
 

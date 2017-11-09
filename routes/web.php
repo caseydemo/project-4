@@ -25,5 +25,4 @@ Route::resource('/message', 'MessageController');
 
 Route::get('/create', 'MessageController@create');
 
-Route::get('/reply/{id}', 'MessageController@create');
 
