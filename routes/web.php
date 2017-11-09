@@ -19,13 +19,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/message', 'HomeController@index')->name('message');
+Route::get('/message/{id}', 'MessageController@read');//->name('message');
 
-Route::get('/message/{id}', 'HomeController@read')->name('message');
+Route::resource('/message', 'MessageController');
 
-Route::get('/write', 'HomeController@write')->name('write');
+Route::get('/create', 'MessageController@create');
 
-Route::get('/create', 'WriteMessageController@index');
-
-Route::post('/store', 'WriteMessageController@store');
+Route::get('/reply/{id}', 'MessageController@create');
 

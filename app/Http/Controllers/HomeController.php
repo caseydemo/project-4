@@ -28,17 +28,12 @@ class HomeController extends Controller
         return view('/home', compact('personal_messages'));
     }
 
-    public function read($id) {
-        $message = \App\Message::find($id);
+    
 
-
-        return view('message', compact('message'));
-  }
-
-      public function write() {
-      $personal_messages = \App\Message::where('recipient_id', '=', \Auth::user()->id)->get();
+  //     public function write() {
+  //     $personal_messages = \App\Message::where('recipient_id', '=', \Auth::user()->id)->get();
         
 
-        return view('write', compact('personal_messages'));
-  }
+  //       return view('write', compact('personal_messages'));
+  // }
 }
