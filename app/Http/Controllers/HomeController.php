@@ -29,8 +29,8 @@ class HomeController extends Controller
     }
 
     public function read($id) {
-        $game = \App\Message::find($id);
-        $message_id = $id;
-        return view('message', compact('message_id'));
+        $message = \App\Message::find($id);
+
+        return view('message', compact('message'));
   }
 }

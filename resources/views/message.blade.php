@@ -5,7 +5,9 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+                <div class="panel-heading">
+                	{{ \Auth::user()->name }}'s Message From {{ $message->sender->name}}
+                </div>
 
                 <div class="panel-body">
                     @if (session('status'))
@@ -16,37 +18,11 @@
 
                     <table class="table">
                     <tr>
-                        <th></th>
-                        <th>ID</th>
-                        <th>From</th>
-                        <th>Subject</th>
-                        <th>Message</th>
-                        <th>Date</th>
-                    </tr>
-                    
-                    @foreach ($personal_messages as $message)
-                    <tr>
-                        <td>
-                            @if ($message->is_starred) 
-                                <strong>&#9734;</strong>
-                            @else
-                            	{{ $message->id }}
-                            @endif
-                        </td>
-                        <td>
-                            {{ $message->body}}
-                        </td>
-                        <td>{{ $message->subject }}</td>
-                        <td>
-                        	@if($message->is_read)
-                        		<strong><a href="/message/{{$message->id}}">read message</a></strong>
-                        	@else
-                        		<a href="/message/{{$message->id}}">read message</a>
-                        	@endif
-                        </td>
-                        <td>{{ $message->created_at->toDayDateTimeString() }}</td>
-                    </tr>
-                    @endforeach
+                    	{{ $message->body }}
+                	</tr>
+                	<tr>
+                		<br><a href="/home">Back to {{ \Auth::user()->name }}'s Messages</a>
+                	</tr>
 
                 </div>
             </div>
