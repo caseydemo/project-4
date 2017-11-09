@@ -17,5 +17,23 @@
     "laravel-mix": "^1.0",
     "lodash": "^4.17.4",
     "vue": "^2.1.10"
-  }
+  },
+  "name": "project4",
+  "description": "A villains-only messages application.",
+  "version": "1.0.0",
+  "main": "webpack.mix.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caseydemo/project-4.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caseydemo/project-4/issues"
+  },
+  "homepage": "https://github.com/caseydemo/project-4#readme"
 }
